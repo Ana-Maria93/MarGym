@@ -157,7 +157,8 @@ main {
     margin-bottom: 10px;
 }
 
-.image-gallery {
+.image-gallery,
+.service-images {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -165,7 +166,8 @@ main {
     margin-top: 20px;
 }
 
-.image-gallery img {
+.image-gallery img,
+.service-images img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
@@ -173,7 +175,8 @@ main {
 }
 
 @media (max-width: 768px) {
-    .image-gallery img {
+    .image-gallery img,
+    .service-images img {
         flex: 1 1 100%;
     }
 }
