@@ -10,10 +10,17 @@ body, html {
     font-family: 'Roboto', sans-serif;
     background-color: #f8f8f8;
     color: #333;
-    overflow-x: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Header */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 header {
     background-color: #fff;
     padding: 10px 0;
@@ -122,6 +129,7 @@ nav a:hover::after {
 
 /* Main Content */
 main {
+    flex: 1;
     max-width: 1200px;
     margin: 100px auto 20px; /* Adjusted margin to accommodate larger logo */
     padding: 20px;
@@ -181,12 +189,30 @@ main {
     }
 }
 
+.testimonial-item {
+    margin-bottom: 20px;
+}
+
+.testimonial-item blockquote {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.testimonial-author {
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+}
+
 /* Footer */
 footer {
     background-color: #333;
     color: #f8f8f8;
     text-align: center;
     padding: 20px 0;
+    margin-top: auto;
 }
 
 /* Contact Form */
