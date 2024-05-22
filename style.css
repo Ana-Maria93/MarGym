@@ -41,6 +41,7 @@ header {
     display: none;
     cursor: pointer;
     font-size: 30px;
+    padding: 10px;
 }
 
 .menu-icon:before {
@@ -86,16 +87,23 @@ nav a:hover::after {
 
 @media (max-width: 768px) {
     .header-content {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .menu-icon {
         display: block;
+        order: 2;
     }
 
     nav {
         display: none;
+        flex-direction: column;
+        width: 100%;
+        order: 3;
+    }
+
+    nav ul {
         flex-direction: column;
         width: 100%;
     }
@@ -103,6 +111,8 @@ nav a:hover::after {
     nav a {
         margin: 10px 0;
         display: block;
+        text-align: center;
+        width: 100%;
     }
 
     #menuToggle:checked + .menu-icon + nav {
@@ -147,18 +157,25 @@ main {
     margin-bottom: 10px;
 }
 
-.service-images {
+.image-gallery {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
-    margin-top: 10px;
-    justify-content: space-around;
+    margin-top: 20px;
 }
 
-.service-images img {
+.image-gallery img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    flex: 1 1 calc(50% - 20px);
+}
+
+@media (max-width: 768px) {
+    .image-gallery img {
+        flex: 1 1 100%;
+    }
 }
 
 /* Footer */
